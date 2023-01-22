@@ -23,22 +23,48 @@
             <img src=" preview.png" id="main_image">
             <div id="text">
                 Manchmal weiß ich nicht, was ich mit einem Abend anfangen soll. Ich sitze in meiner Wohnung, habe
-                bereits zu Abend gegessen und alles, was anstand, ist erledigt. Und jetzt? Möglichkeiten gibt es viele.
-                Aber worauf habe ich Lust? Am besten etwas, was mich entspannt. Aber da bin ich mir meistens auch nicht
-                so sicher, was genau das denn sein könnte. Also tue ich einfach das, was mir als nächstes in den Sinn
-                kommt und sich zumindest ein bisschen so anfühlt, als könnte ich Lust drauf haben.<br>
-                Aber habe ich gerade ein konkretes Projekt, an dem ich arbeite, dann fällt mir diese Überlegung
-                leichter. Dann weiß ich besser, woran ich bin. Für einige Abende war der "Sonnenuntergang in Excel" ein
-                solches Projekt. In der Originalversion ist dieses kleine Kunstwerk
-                eine HTML-Seite (ausgelegt auf 1920x1080). Oben sieht man einen Screenshort dieser Seite.<br>
-                Die Tabellen sind eine Kapazitätsplanung, die ich bei einem meiner Arbeitgeber in der Vergangengeit
-                erstellt hatte. Die Daten sind natürlich verfälscht. War die Planung abgeschlossen, war es Gang und
-                Gebe, eine E-Mail an die entsprechenden Teamleiter zu schicken, um sie über die Planung zu informieren.
-                Und dieses Mal hatte ich, statt wie normalerweise einfach die Excel-Tabellen zu screenshotten, dieses
-                kleine Kunstwerk erstellt. Und glücklicherweise hat es gefallen :)
+                bereits zu Abend gegessen und alles, was anstand, ist erledigt. Aber eine konkrete Lust auf irgendetwas
+                habe ich nicht. Möglichkeiten gibt es theorethisch viele. Aber was davon will ich heute Abend tun?<br>
+                Solche Abende sind prädestiniert dafür, sich auf die Couch zu setzen, Musik anzumachen,
+                Twitter zu öffnen und sich einfach zu entspannen. Und so wie der Abend begonnen hat, so muss er ja
+                nicht enden. Irgendwann kommt mir dann doch noch eine spontane Lust auf etwas und dann tue ich eben
+                das.<br>
+                Aber habe ich gerade ein konkretes Projekt, an dem ich arbeite, dann habe ich das genau umgekehrte
+                Problem: Ich muss aufpassen, dass ich mich nicht überlaste. Anstatt, dass ich überlege, was ich tun
+                könnte, ist mir völlig klar, was ich tun werde und vergesse dann gerne, dass das Schlafen später alleine
+                nicht reicht, um am nächsten Morgen erholt zu sein. Ich gehe vom Abendessen direkt über in das Projekt
+                und vergesse dabei komplett, dass ich mich entspannen sollte.
+                <br>
+                Aber wie dem auch sei, einige Abende lang war der "Sonnenuntergang in Excel" mein Projekt. Die Abbildung
+                oben ist nur ein Screenshot. Das Original ist eine HTML-Seite (ausgelegt auf 1920x1080), die über dem
+                Screenshot verlinkt ist. Die Idee für dieses Kunstwerk ist daraus entstanden, dass ich versucht hatte,
+                eine schöne Formatierung für ein Excel-Sheet zu finden. Die erste Idee war, Tabellen nicht entlang von
+                geordneten Linien auszurichten, sondern frei. Die zweite Idee war, die Tabellen so anzuordnen, dass eine
+                erkennbare Form daraus wird. Später bin ich noch darauf gekommen, das ganze farblich in ein Bild
+                einzufügen. Das ganze habe ich noch mit einer kurzen Geschichte ergänzt, und voilá - fertig war der
+                "Sonnenuntergang in Excel".<br>
+                Und wenn man mit Strg+Mausrad in die Website rein zoomt, sieht es tatsächlich so aus, als würden die
+                Vögel durch den Sonnenuntergang fliegen :)
             </div>
+            <button id="overview_button" onclick="playPause()">Play/Pause</button>
+            <video id="video" width="500" height="240" loop style="border: 2px solid black">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
+    <script>
+        var myVideo = document.getElementById("video");
+        myVideo.playbackRate = 0.8;
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+    </script>
+
 </body>
 
 </html>
