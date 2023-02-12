@@ -11,7 +11,10 @@
 }
 
 .category_container {
-    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .category_header {
